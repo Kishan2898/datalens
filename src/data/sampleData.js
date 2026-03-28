@@ -1,0 +1,42 @@
+export const sampleDataset = [
+  {
+    order_id: 'ORD-1001',
+    customer: 'Northwind Labs',
+    region: 'North America',
+    revenue: 12400,
+    churn_risk: 'Low',
+    signup_date: '2025-01-10',
+  },
+  {
+    order_id: 'ORD-1002',
+    customer: 'BrightPath',
+    region: 'Europe',
+    revenue: 8900,
+    churn_risk: 'Medium',
+    signup_date: '2025-01-16',
+  },
+  {
+    order_id: 'ORD-1003',
+    customer: 'Riverstone Retail',
+    region: 'Asia',
+    revenue: 15450,
+    churn_risk: 'Low',
+    signup_date: '2025-02-02',
+  },
+  {
+    order_id: 'ORD-1004',
+    customer: 'Nova Health',
+    region: 'North America',
+    revenue: 0,
+    churn_risk: 'High',
+    signup_date: '2025-02-07',
+  },
+  {
+    order_id: 'ORD-1005',
+    customer: 'Studio Vertex',
+    region: 'Europe',
+    revenue: 11200,
+    churn_risk: '',
+    signup_date: '2025-02-14',
+  },
+]
