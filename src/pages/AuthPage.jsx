@@ -24,7 +24,7 @@ function AuthPage({ mode }) {
         await login({ email, password })
       }
 
-      navigate('/dashboard')
+      navigate('/analysis')
     } catch (requestError) {
       setError(requestError.response?.data?.message || requestError.message || 'Authentication failed.')
     } finally {
