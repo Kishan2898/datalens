@@ -6,7 +6,7 @@ const getToken = () => window.localStorage.getItem('datalens_token')
 
 export const http = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000,
+  timeout: 30000,
 })
 
 http.interceptors.request.use((config) => {
@@ -18,3 +18,14 @@ http.interceptors.request.use((config) => {
 
   return config
 })
+
+http.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.code === 'ECONNABORTED') {
+      error.message = 'The server took too long to respond. If the backend is on free hosting, wait a few seconds and try again.'
+    }
+
+    return Promise.reject(error)
+  },
+)
